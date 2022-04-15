@@ -134,6 +134,83 @@ stateDiagram
     nome <- "José da Silva"
     media = (nota1+nota2+nota3+nota4)/4 
 
+### Operadores relacionais
 
+> "São expressões compostas por outras expressões por outras expressões ou variáveis numéricas com operadores relacionais. As expressões relacionais retornam valores lógicos (verdadeiro / falso)"  
 
+#### :pencil2: Exemplo
+
+| Símbolo |Nome do Operador | Exemplo | Significado |
+|--|--|--|--|
+|**>**|Maior que| x>y| x é maior que y?|
+|**>=**|Maior ou Igual| x>=y| x é maior ou igual a y?|
+|**<**|Menor que| x<y| x é menor que y?|
+|**<=**|Menor ou Igual| x<=y| x é menor ou igual a y?|
+|**==**|Igualdade| x==y| x é igual a y?|
+|**!=**|Diferente de| x!=y| x é diferente de y?| 
+
+### Tomadas de Decisão
+
+> "Quando escrevemos programas, geralmente ocorre a necessidade de decidir o que fazer dependendo de alguma condição encontrada durante a execução"
+
+#### :pencil2: Exemplo
+
+```mermaid
+graph  TD;  
+ A([Principal])-->B[[Caracteres Cliente]];  
+ B-->C[[Caracteres Cartão]];  
+ C-->D[[Caracteres Número]];  
+ D-->E[/Entrada Cliente/];
+ E-->F[/Entrada Cartão/];
+ F-->G{Alternativa};
+ G-->|Falso|H[/Saída - Infelizmente só realizamos vendas por cartão de crédito /]
+ G-->|Verdadeiro|I[/Entrada Número/]
+ H-->J(( ));
+ I-->J
+ J-->L([Fim])
+```
+### Concatenação
+
+> - Concatenação é um termo usado em computação para designar a operação de uni o conteúdo de duas strings*.
+> *string é uma sequência de caracteres
+> - Agrupamento de duas ou mais células que, incluindo fórmulas, textos ou outras informações contida no seu interior, dá origem a um **único resultado**. 
+
+### Estrutura de repetição
+
+> Dentro da lógica de programação é uma estrutura que permite executar mais de uma vez o mesmo comando ou conjunto de comandos, de acordo com uma condição ou com um **contador**.
+
+#### :pencil2: Exemplo
+```mermaid
+graph TD;
+A([Principal]) --> B[[Inteiro numero, limite]];
+B --> C[numero = 1]
+C --> D[limite = 10]
+D --> E{numero<= limite}
+E -->|Falso| F([Fim])
+E -->|Verdadeiro| G[/Saída - Contagem Atual: & numero/]
+G --> H[numero = numero + 1]  
+H --> E
+```
+
+## Linguagem de Programação e o Portugol
+
+### 💡 O que é Linguagem de Programação?
+
+> - "Linguagem de Programação é uma linguagem escrita e formal que especifica um conjunto de instruções e regras usadas para gerar programas (software). Um software pode ser desenvolvido para rodar em um computador, dispositivo móvel ou em qualquer equipamento que permita sua execução"
+> - "O que é óbvio para você, certamente não é óbvio para uma máquina. E se você quer que a máquina faça algo para você, é preciso **falar com ela**".
+> :red_circle: **A função das linguagens de programação é servir de um meio de comunicação entre humanos e computadores**
+
+#### :round_pushpin: Tipos de Linguagem de Programação
+
+ **1. Alto Nível** 
+ > Essas são aquelas cuja sintaxe se aproxima mais da nossa linguagem e se distanciam mais da linguagem de máquina.
+ 
+ **2. Baixo Nível**
+ > É aquela que se aproxima mais da linguagem de máquina. Essas são as que você precisa ter o conhecimento direto da arquitetura do computados para fazer alguma coisa.
+
+**3. Compiladas**
+> É uma linguagem de programação em que o código fonte é executado diretamente pelo sistema operacional ou pelo processador, após ser traduzido por meio de um processo chamado compilação.
+
+**4. Interpretadas**
+> É uma linguagem de programação em que o código fonte é executado por um programa de computador chamado interpretador, que em seguida é executado pelo sistema operacional ou processador. 
 
