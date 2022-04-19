@@ -32,6 +32,6 @@
 
 > Todos os objetos Javascript herdam propriedades e métodos de um prototype. O objeto Object.prototype está no topo desta cadeia.
 
-![enter image description here](/img/javascript.png)
+![enter image description here](../img/javascript.png)
 
 
